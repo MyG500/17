@@ -1,0 +1,18 @@
+$primaryColor: rgb(153, 0, 255);
+$secondaryColor: rgb(198, 124, 124);
+
+@mixin customDIV($border: rgb(54, 178, 236)) {
+    height: 400px;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border: solid 5px $border;
+}
+
+.container {
+    @include customDIV();
+}
+
+$soothy {
+    font-weight: 800;
+    text
+}

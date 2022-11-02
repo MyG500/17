@@ -1,0 +1,39 @@
+@use 'body.scss';
+// $primaryColor: rgb(85, 165, 132);
+// body {
+//     background-color: grey;
+// }
+
+$secondaryColor: rgb(30, 84, 178);
+@mixin customDiv($border: green) {
+    height: 400px;
+    background-color: body.$primaryColor;
+    color: $secondaryColor;
+    border: solid 5px $border;
+}
+
+
+%soothy {
+    font-weight: 800;
+    text-decoration: underline;
+    color: red;
+}
+%soothy2 {
+    font-weight: 400;
+    text-decoration: underline;
+    color: blue;
+}
+
+.container {
+    @include customDiv();
+    a {
+        @extend %soothy;
+    }
+}
+.footer {
+    @include customDiv($border: blue);
+    a {
+        @extend %soothy2;
+    }
+}
+
